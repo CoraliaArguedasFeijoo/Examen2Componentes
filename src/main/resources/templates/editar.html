@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Editar</title>
+</head>
+<body>
+<h1>Editar</h1>
+<form action="#" th:action="@{/editar/{id}(id=${id})}" th:object="${persona}" method="post">
+    <div style="margin-bottom: 1%">
+    <label for="name">Nombre</label>
+    <input type="text" th:field="*{nombre}" id="name" readonly style="color:gray">
+    </div>
+        <div style="margin-bottom: 1%">
+    <label for="name">Primer Apellido</label>
+    <input type="text" th:field="*{primerApellido}" id="primer" readonly style="color:gray">
+        </div>
+            <div style="margin-bottom: 1%">
+    <label for="name">Segundo Apellido</label>
+    <input type="text" th:field="*{segundoApellido}" id="segundo" readonly style="color:gray">
+            </div>
+                <div style="margin-bottom: 1%">
+    <label for="name">Fecha de Nacimiento</label>
+    <input type="text" th:field="*{fechaNacimiento}" id="fechaNac" readonly style="color:gray">
+                </div>
+                    <div style="margin-bottom: 1%">
+    <label for="name">Email</label>
+    <input type="text" th:field="*{email}" id="email" readonly style="color:gray">
+                    </div>
+                        <div style="margin-bottom: 1%">
+    <label for="name">Teléfono</label>
+    <input type="text" th:field="*{telefono}" id="tele" readonly style="color:gray">
+                        </div>
+                            <div style="margin-bottom: 1%">
+    <label for="name">Posición</label>
+    <input type="text" th:field="*{posicion}" id="pos" readonly style="color:gray">
+                            </div>
+                                <div style="margin-bottom: 1%">
+    <label for="name">Estatura</label>
+    <input type="text" th:field="*{estatura}" id="estatura" readonly style="color:gray">
+                                </div>
+                                    <div style="margin-bottom: 1%">
+    <label for="name">Peso</label>
+    <input type="text" th:field="*{peso}" id="peso">
+                                    </div>
+                                        <div style="margin-bottom: 1%">
+    <label for="name">Masa Muscular</label>
+    <input type="text" th:field="*{masaMuscular}" id="masa" readonly style="color:gray">
+                                        </div>
+                                            <div style="margin-bottom: 1%">
+    <label for="name">Genero</label>
+    <input type="text" th:field="*{genero}" id="genero" readonly style="color:gray">
+                                            </div>
+                                                <div style="margin-bottom: 1%">
+    <label for="name">Provincia</label>
+    <input type="text" th:field="*{provincia}" id="prov">
+                                                </div>
+                                                    <div style="margin-bottom: 1%">
+    <label for="name">Cantón</label>
+    <input type="text" th:field="*{canton}" id="canton">
+                                                    </div>
+                                                        <div style="margin-bottom: 1%">
+    <label for="name">Distrito</label>
+    <input type="text" th:field="*{distrito}" id="distrito">
+                                                        </div>
+    <input type="submit" value="Guardar Cambios">
+</form>
+<p> <a href="/" style="background-color: lightgray; padding: 10px 15px;text-decoration: none">Volver al inicio</a></p>
+</body>
+</html>

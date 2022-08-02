@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle Jugador</title>
+</head>
+<body>
+<h1>Detalle Jugador</h1>
+    <div th:each="entry: ${lista}">
+            <h4>
+                Nombre:
+                <span th:text="${entry.nombre}">Nombre</span>
+            </h4>
+            <h4>
+                Primer Apellido:
+                <span th:text="${entry.primerApellido}">Primer Apellido</span>
+            </h4>
+            <h4>
+                Segundo Apellido:
+                <span th:text="${entry.segundoApellido}">Segundo Apellido</span>
+            </h4>
+            <h4>
+                Fecha Nacimiento:
+                <span th:text="${entry.fechaNacimiento}">Fecha Nacimiento</span>
+            </h4>
+            <h4>
+                Email:
+                <span th:text="${entry.email}">Email</span>
+            </h4>
+            <h4>
+                Teléfono:
+                <span th:text="${entry.telefono}">Telefono</span>
+            </h4>
+            <h4>
+                Posición:
+                <span th:text="${entry.posicion}">Posicion</span>
+            </h4>
+            <h4>
+                Estatura:
+                <span th:text="${entry.estatura}">Estatura</span>
+            </h4>
+            <h4>
+                Peso:
+                <span th:text="${entry.peso}">Peso</span>
+            </h4>
+            <h4>
+                Género:
+                <span th:text="${entry.genero}">Genero</span>
+            </h4>
+            <h4>
+                Masa mascular:
+                <span th:text="${entry.masaMuscular}">Masa Muscular</span>
+            </h4>
+            <h4>
+                Provincia:
+                <span th:text="${entry.provincia}">Provincia</span>
+            </h4>
+            <h4>
+                Cantón:
+                <span th:text="${entry.canton}">Cantón</span>
+            </h4>
+            <h4>
+                Distrito:
+                <span th:text="${entry.distrito}">Distrito</span>
+            </h4>
+            <a th:href="@{/verMasa/{id}(id= ${entry.id})}"  style="background-color: lightgray; padding: 10px 15px;text-decoration: none"> Ver historial de masa muscular</a>
+            <a th:href="@{/borrar/{id}(id= ${entry.id})}"  style="background-color: lightgray; padding: 10px 15px;text-decoration: none">Borrar</a>
+            <a th:href="@{/editar/{id}(id= ${entry.id})}"  style="background-color: lightgray; padding: 10px 15px;text-decoration: none">  Editar</a>
+        <p style="margin-top: 2%"> <a href="/"  style="background-color: lightgray; padding: 10px 15px;text-decoration: none">Volver al inicio</a></p>
+    </div>
+</body>
+</html>

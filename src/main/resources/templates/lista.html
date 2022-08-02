@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Personas</title>
+</head>
+<body>
+<h1>Lista de jugadores</h1>
+<form th:action="@{/listar}" method="get">
+  <input type="text" name="keyword" th:value="${keyword}"  placeholder="Buscar" size="40" >
+  <button type="submit" >Search</button>
+</form>
+<ul>
+  <div th:each="entry: ${lista}">
+    <li>
+      <h4>
+      <span th:text="${entry.nombre} + ' '+ ${entry.primerApellido} +' '+ ${entry.segundoApellido}">Nombre</span>
+      </h4>
+      <a th:href="@{/verDetalle/{id}(id= ${entry.id})}" style="background-color: lightgray; padding: 10px 15px;text-decoration: none">Ver Detalle</a>
+    </li>
+  </div>
+</ul>
+<p style="margin-top: 2%"> <a href="/" style="background-color: lightgray; padding: 10px 15px;text-decoration: none">Volver al inicio</a></p>
+</body>
+</html>

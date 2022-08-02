@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registrar colaborador(a)</title>
+</head>
+<body>
+<form action="#" th:action="@{/registrar}" th:object="${nueva}" method="post">
+  <h1>Registrar Jugador</h1>
+  <div style="margin-bottom: 1%">
+  <label for="name">Nombre</label>
+  <input type="text" th:field="*{nombre}" id="name">
+  </div>
+  <div style="margin-bottom: 1%">
+  <label for="name">Primer Apellido</label>
+  <input type="text" th:field="*{primerApellido}" id="primer">
+  </div>
+    <div style="margin-bottom: 1%">
+  <label for="name">Segundo Apellido</label>
+  <input type="text" th:field="*{segundoApellido}" id="segundo">
+    </div>
+      <div style="margin-bottom: 1%">
+  <label for="name">Fecha de Nacimiento</label>
+  <input type="text" th:field="*{fechaNacimiento}" id="fechaNac">
+      </div>
+        <div style="margin-bottom: 1%">
+  <label for="name">Email</label>
+  <input type="text" th:field="*{email}" id="email">
+        </div>
+          <div style="margin-bottom: 1%">
+  <label for="name">Teléfono</label>
+  <input type="text" th:field="*{telefono}" id="tele">
+          </div>
+  <div style="margin-bottom: 1%">
+    <label for="name">Posicion</label>
+    <select th:field="*{posicion}" id="posicion">
+      <option th:value="Delantero" th:name="Delantero">Delantero</option>
+      <option th:value="Defensa" th:name="Defensa">Defensa</option>
+      <option th:value="Portero" th:name="Portero">Portero</option>
+      <option th:value="Mediocampista" th:name="Mediocampista">Mediocampista</option>
+    </select>
+  </div>
+              <div style="margin-bottom: 1%">
+  <label for="name">Estatura</label>
+  <input type="text" th:field="*{estatura}" id="estatura">
+              </div>
+                <div style="margin-bottom: 1%">
+  <label for="name">Peso</label>
+  <input type="text" th:field="*{peso}" id="peso">
+                </div>
+  <div style="margin-bottom: 1%">
+    <label for="name">Genero</label>
+    <select th:field="*{genero}" id="genero">
+      <option th:value="Masculino" th:name="Masculino">Maculino</option>
+      <option th:value="Femenino" th:name="Masculino">Femenino</option>
+      <option th:value="Otro" th:name="Otro">Otro</option>
+    </select>
+  </div>
+                    <div style="margin-bottom: 1%">
+  <label for="name">Provincia</label>
+  <input type="text" th:field="*{provincia}" id="prov">
+                    </div>
+                      <div style="margin-bottom: 1%">
+  <label for="name">Cantón</label>
+  <input type="text" th:field="*{canton}" id="canton">
+                      </div>
+                        <div style="margin-bottom: 1%">
+  <label for="name">Distrito</label>
+  <input type="text" th:field="*{distrito}" id="distrito">
+                        </div>
+  <input type="submit" value="Registrar">
+</form>
+<p> <a href="/" style="background-color: lightgray; padding: 10px 15px;text-decoration: none">Volver al inicio</a></p>
+</body>
+</html>

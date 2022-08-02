@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Historial masa muscular</title>
+</head>
+<body>
+<h1>Historial masa muscular</h1>
+<div th:each="entry: ${lista}">
+<ul>
+        <li>
+            <h4>
+                Fecha Creación:
+                <span th:text="${entry.fechaIngreso}">Fecha Creación</span>
+            </h4>
+            <h4>
+                Masa Muscular:
+                <span th:text="${entry.masaMuscular}">MasaMuscular</span>
+            </h4>
+        </li>
+    </ul>
+</div>
+<p> <a href="/" style="background-color: lightgray; padding: 10px 15px;text-decoration: none">Volver al inicio</a></p>
+</body>
+</html>
